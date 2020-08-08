@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body { overflow-x: hidden; }
+
+body { margin: 0rem; padding: 0rem; font-family: 'Raleway'; background-color: #011C26; }
+
+/* Phones & Tablets */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 1rem;
+}
+
+/* Desktop */
+@media only screen and (min-width: 968px) {
+    .container { padding: 1rem 6rem; }
+}
+
+
+
+/* Phone */
+nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: .5rem 0rem;
+}
+
+nav img { width: 50%; }
+
+/* Tablet */
+@media only screen and (min-width: 498px) and (max-width: 968px) {
+    nav img { width: 30%; }
+}
+
+/* Desktop */
+@media only screen and (min-width: 968px) {
+    nav { justify-content: flex-end; }
+    nav img { width: 20%; }
+}
+
+
+
+/* Phone */
+header {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 6rem;
+    padding: 0rem;
+}
+
+header h1 {
+    color: #F4CB89;
+    font-size: 2rem;
+    margin: 0rem;
+    padding: 0rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Tablet */
+@media only screen and (min-width: 498px) and (max-width: 968px) {
+    header h1 { font-size: 2.5rem; }
+}
+
+/* Desktop */
+@media only screen and (min-width: 968px) {
+    header { width: 70%; }
+    header h1 { font-size: 2.5rem; }
+}
+
+
+
+/* Phone */
+.content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+.content .art {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.content .art img { width: 30%; }
+
+.content .description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content .description p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 300;
+}
+
+.content .description p b { font-weight: 500; }
+
+.content .description a { width: 100%; text-decoration: none; }
+
+.content .description button {
+    width: 100%;
+    margin: 0rem;
+    padding: 1rem 2rem;
+    border: 0px;
+    border-radius: 50px;
+    color: #F4CB89;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #D9042B;
+    animation-name: button;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.content .description button:hover {
+    color: white;
+    transition: .3s linear;
+}
+
+@keyframes button {
+    0% { background-color: #D9042B; }
+    25% { background-color: #6B0C22; }
+    50% { background-color: #D9042B; }
+    75% { background-color: #6B0C22; }
+    100% { background-color: #D9042B; }
+}
+
+/* Tablet & Desktop */
+@media only screen and (min-width: 498px) {
+    .content .art { width: 30%; }
+    .content .art img { width: 80%; }
+    .content .description { width: 70%; }
+    .content .description p { font-size: 1.5rem; }
+    .content .description button { font-size: 1.5rem; }
+}
